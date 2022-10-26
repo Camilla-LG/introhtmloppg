@@ -5,17 +5,18 @@ body {
 .vertical {
     display: flex;
     flex-direction: column;
-    height: fit-content;
 }
 
 .horisontal{
     display:flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .grid{
     display:grid;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 520px);
+    width: auto;
 }
 
 .card {

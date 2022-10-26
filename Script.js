@@ -28,7 +28,7 @@ function show1(){
             <li>
                 Koderedigeringsprogrammet
                 <a href="https://code.visualstudio.com/">Visual Studio Code</a>
-                Vi skal bruke noen <i>extensions</i>:
+                <br>Vi skal bruke noen <i>extensions</i>:
                 <ul>
                     <li>JavaScript-booster</li>
                     <li>es6-string-html</li>
