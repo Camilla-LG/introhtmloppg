@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro Oppgave
-    </title>
+    <title>Intro Oppgave</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="Script.js" defer></script>
 </head>
 
 <body>
-    <button class="none"> Ingen layout </button>
-    <button class="vertical"> Vertikal layout </button>
-    <button class="horisontal"> Horisontal layout </button>
-    <button class="grid"> Grid layout </button>
+    <button id="none" onclick="ChangeToNone()">Ingen layout </button>
+    <button id="vertical" onclick="ChangeToVertical()"> Vertikal layout </button>
+    <button id="horisontal" onclick="ChangeToHorisontal()"> Horisontal layout </button>
+    <button id="grid" onclick="ChangeToGrid()"> Grid layout </button>
 
-    <h1> Eksempel 1 </h1>
+    <h1>Eksempel 1</h1>
+    <div id="allCards">
     <div class="card">
         <div class="header green" onclick="show1()"> Verktøy</div>
         <div id="TagGreen"></div>
@@ -42,8 +43,7 @@
         <div class="header dark" onclick="show5()">hode, kropp og ben</div>
         <div id="TagDark"></div>
     </div>
-
-    <script src="Script.js"></script>
+</div>
 </body>
 
 </html>
