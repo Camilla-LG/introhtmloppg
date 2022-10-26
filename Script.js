@@ -1,3 +1,22 @@
+function ChangeToNone(){
+    document.getElementById("allCards").classList=[];
+}
+
+function ChangeToVertical(){
+    document.getElementById("allCards").classList=[];
+    document.getElementById("allCards").classList.add('vertical');
+}
+
+function ChangeToHorisontal(){
+    document.getElementById("allCards").classList=[];
+    document.getElementById("allCards").classList.add('horisontal');
+}
+
+function ChangeToGrid(){
+    document.getElementById("allCards").classList=[];
+    document.getElementById("allCards").classList.add('grid');
+}
+
 function show1(){
     blankAll();
     document.getElementById('TagGreen').innerHTML= /*HTML*/`
@@ -9,7 +28,7 @@ function show1(){
             <li>
                 Koderedigeringsprogrammet
                 <a href="https://code.visualstudio.com/">Visual Studio Code</a>
-                </br>Vi skal bruke noen <i>extensions</i>:
+                Vi skal bruke noen <i>extensions</i>:
                 <ul>
                     <li>JavaScript-booster</li>
                     <li>es6-string-html</li>
@@ -35,9 +54,9 @@ function show2(){
         <ul>
             <li>Tagger for grunnleggende oppsett av en HTML-fil</li>
             <li>Tagger for grunnleggende formatering av tekst</li>
-            <li><tt>&lt;div&gt;</tt></li>
-            <li><tt>&lt;input type="text"&gt;</tt></li>
-            <li><tt>&lt;button&gt;</tt></li>
+            <li><kbd>&lt;div&gt;</kbd></li>
+            <li><kbd>&lt;input type="text"&gt;</kbd></li>
+            <li><kbd>&lt;button&gt;</kbd></li>
             <li><a href="https://www.w3schools.com/html/default.asp" target="_new">W3Schools HTML
                     Tutorial</a>
             </li>
@@ -57,13 +76,13 @@ function show3(){
         Vi bruker CSS til å <i>style</i> et dokument, altså farger, fonter, utseende og
         lignende.
         <ul>
-            <li><tt>background-color</tt></li>
-            <li><tt>color</tt></li>
-            <li><tt>padding</tt></li>
-            <li><tt>margin</tt></li>
-            <li><tt>border</tt></li>
-            <li><tt>text-align</tt></li>
-            <li><tt>font-size</tt></li>
+            <li><kbd>background-color</kbd></li>
+            <li><kbd>color</kbd></li>
+            <li><kbd>padding</kbd></li>
+            <li><kbd>margin</kbd></li>
+            <li><kbd>border</kbd></li>
+            <li><kbd>text-align</kbd></li>
+            <li><kbd>font-size</kbd></li>
             <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_new">Flexbox</a>
             </li>
             <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_new">Grid</a>
@@ -106,21 +125,22 @@ function show5(){
     document.getElementById('TagDark').innerHTML= /*HTML*/`
 
     <div class="InnerDark">
-    <div>
-        <button>◀</button>
-        <img src="img/head1.png" />
-        <button>▶</button>
-    </div>
-    <div>
-        <button>◀</button>
-        <img src="img/body1.png" />
-        <button>▶</button>
-    </div>
-    <div>
-        <button>◀</button>
-        <img src="img/legs1.png" />
-        <button>▶</button>
-    </div>
+            <div id="FaceandButtons" class="inter">
+            <button onclick="showHead4()">◀</button>
+            <img src= "img/head1.png"/>
+            <button onclick="showHead2()">▶</button>
+            </div>
+            <div id="BodyandButtons" class="inter">
+            <button onclick="showBody1()">◀</button>
+            <img src= "img/body2.png"/>
+            <button onclick= "showBody3()">▶</button>
+            </div>
+            <div id="LegsandButtons" class="inter">
+            <button onclick="showLegs4()">◀</button>
+            <img src="img/legs1.png"/>
+            <button onclick="showLegs2()">▶</button>
+            </div>
+        </div>
     </div>
     `;
 }
@@ -131,4 +151,103 @@ function blankAll(){
     document.getElementById('TagRed').innerHTML='';
     document.getElementById('TagYellow').innerHTML='';
     document.getElementById('TagDark').innerHTML='';
+}
+
+showHead1
+function showHead1(){
+    document.getElementById('FaceandButtons').innerHTML= /*HTML*/`
+        <button onclick="showHead4()">◀</button>
+        <img src= "img/head1.png"/>
+        <button onclick="showHead2()">▶</button>
+        `;
+}
+
+function showHead2(){
+    document.getElementById('FaceandButtons').innerHTML= /*HTML*/`
+        <button onclick="showHead1()">◀</button>
+        <img src= "img/head2.png"/>
+        <button onclick= "showHead3()">▶</button>
+        `;
+}
+
+function showHead3(){
+    document.getElementById('FaceandButtons').innerHTML= /*HTML*/`
+        <button onclick= "showHead2()">◀</button>
+        <img src="img/head3.png"/>
+        <button onclick= "showHead4()">▶</button>
+        `;
+}
+
+function showHead4(){
+    document.getElementById('FaceandButtons').innerHTML= /*HTML*/`
+        <button onclick="showHead3()">◀</button>
+        <img src="img/head4.png"/>
+        <button onclick="showHead1()">▶</button>
+        `;
+}
+
+showBody1
+function showBody1(){
+    document.getElementById('BodyandButtons').innerHTML= /*HTML*/`
+        <button onclick="showBody4()">◀</button>
+        <img src="img/body1.png"/>
+        <button onclick="showBody2()">▶</button>
+        `;
+}
+
+function showBody2(){
+    document.getElementById('BodyandButtons').innerHTML= /*HTML*/`
+        <button onclick="showBody1()">◀</button>
+        <img src="img/body2.png"/>
+        <button onclick="showBody3()">▶</button>
+        `;
+}
+
+function showBody3(){
+    document.getElementById('BodyandButtons').innerHTML= /*HTML*/`
+        <button onclick="showBody2()">◀</button>
+        <img src="img/body3.png"/>
+        <button onclick="showBody4()">▶</button>
+        `;
+}
+
+function showBody4(){
+    document.getElementById('BodyandButtons').innerHTML= /*HTML*/`
+        <button onclick="showBody3()">◀</button>
+        <img src="img/body4.png"/>
+        <button onclick="showBody1()">▶</button>
+        `;
+}
+
+showLegs1
+function showLegs1(){
+    document.getElementById('LegsandButtons').innerHTML= /*HTML*/`
+        <button onclick="showLegs4()">◀</button>
+        <img src="img/legs1.png"/>
+        <button onclick="showLegs2()">▶</button>
+        `;
+}
+
+function showLegs2(){
+    document.getElementById('LegsandButtons').innerHTML= /*HTML*/`
+        <button onclick="showLegs1()">◀</button>
+        <img src="img/legs2.png"/>
+        <button onclick="showLegs3()">▶</button>
+        `;
+}
+
+function showLegs3(){
+    document.getElementById('LegsandButtons').innerHTML= /*HTML*/`
+        <button onclick="showLegs2()">◀</button>
+        <img src="img/legs3.png"/>
+        <button onclick="showLegs4()">▶</button>
+        `;
+}
+
+function showLegs4(){
+    document.getElementById('LegsandButtons').innerHTML= /*HTML*/`
+        <button onclick="showLegs3()">◀</button>
+        <img src="img/legs4.png"/>
+        <button onclick="showLegs1()">▶</button>
+        `;
 }
